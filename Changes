@@ -1,4 +1,7 @@
 Revision history for Perl extension Dist-Zilla-Plugin-CopyFilesFromBuild
 
+0.103450  2010-12-10 18:10:26 PST8PDT
+    - Added the ability to move as well as copy
+
 0.103420  2010-12-08 13:33:09 PST8PDT
     - Initial CPAN release

@@ -1,5 +1,5 @@
 ---
-abstract: 'Copy specific files after building (for SCM inclusion, etc.)'
+abstract: 'Copy (or move) specific files after building (for SCM inclusion, etc.)'
 author:
   - 'Ryan C. Thompson <rct@thompsonclan.org>'
 build_requires:
@@ -21,8 +21,11 @@ name: Dist-Zilla-Plugin-CopyFilesFromBuild
 requires:
   Dist::Zilla::Role::AfterBuild: 0
   File::Copy: 0
+  List::AllUtils: 0
   Moose: 0
+  Moose::Autobox: 0
   MooseX::Has::Sugar: 0
+  Set::Scalar: 0
   perl: v5.10
   utf8: 0
-version: 0.103420
+version: 0.103450

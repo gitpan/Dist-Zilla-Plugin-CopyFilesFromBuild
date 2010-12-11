@@ -9,7 +9,7 @@ use ExtUtils::MakeMaker 6.31;
 
 
 my %WriteMakefileArgs = (
-  'ABSTRACT' => 'Copy specific files after building (for SCM inclusion, etc.)',
+  'ABSTRACT' => 'Copy (or move) specific files after building (for SCM inclusion, etc.)',
   'AUTHOR' => 'Ryan C. Thompson <rct@thompsonclan.org>',
   'BUILD_REQUIRES' => {
     'Carp' => '0',
@@ -29,11 +29,14 @@ my %WriteMakefileArgs = (
   'PREREQ_PM' => {
     'Dist::Zilla::Role::AfterBuild' => '0',
     'File::Copy' => '0',
+    'List::AllUtils' => '0',
     'Moose' => '0',
+    'Moose::Autobox' => '0',
     'MooseX::Has::Sugar' => '0',
+    'Set::Scalar' => '0',
     'utf8' => '0'
   },
-  'VERSION' => '0.103420',
+  'VERSION' => '0.103450',
   'test' => {
     'TESTS' => 't/*.t'
   }
