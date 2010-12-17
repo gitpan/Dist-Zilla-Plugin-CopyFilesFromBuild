@@ -9,6 +9,7 @@ build_requires:
   File::Temp: 0
   Scalar::Util: 0
   Test::More: 0.94
+  perl: 5.004
 configure_requires:
   ExtUtils::MakeMaker: 6.31
 dynamic_config: 0
@@ -26,6 +27,9 @@ requires:
   Moose::Autobox: 0
   MooseX::Has::Sugar: 0
   Set::Scalar: 0
-  perl: v5.10
+  perl: 5.008
   utf8: 0
-version: 0.103450
+resources:
+  homepage: http://github.com/DarwinAwardWinner/Dist-Zilla-Plugin-CopyFilesFromBuild/tree
+  repository: git://github.com/DarwinAwardWinner/Dist-Zilla-Plugin-CopyFilesFromBuild.git
+version: 0.103510

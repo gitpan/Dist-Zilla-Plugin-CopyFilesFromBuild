@@ -3,7 +3,7 @@ NAME
     after building (for SCM inclusion, etc.)
 
 VERSION
-    version 0.103450
+    version 0.103510
 
 SYNOPSIS
     In your dist.ini:
@@ -42,6 +42,19 @@ BUGS AND LIMITATIONS
 SEE ALSO
     *   Dist::Zilla::Plugin::CopyReadmeFromBuild - The basis for this module
 
+INSTALLATION
+    See perlmodinstall for information and options on installing Perl
+    modules.
+
+AUTHOR
+    Ryan C. Thompson <rct@thompsonclan.org>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2010 by Ryan C. Thompson.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+
 DISCLAIMER OF WARRANTY
     BECAUSE THIS SOFTWARE IS LICENSED FREE OF CHARGE, THERE IS NO WARRANTY
     FOR THE SOFTWARE, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN
@@ -63,13 +76,4 @@ DISCLAIMER OF WARRANTY
     FAILURE OF THE SOFTWARE TO OPERATE WITH ANY OTHER SOFTWARE), EVEN IF
     SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH
     DAMAGES.
-
-AUTHOR
-    Ryan C. Thompson <rct@thompsonclan.org>
-
-COPYRIGHT AND LICENSE
-    This software is copyright (c) 2010 by Ryan C. Thompson.
-
-    This is free software; you can redistribute it and/or modify it under
-    the same terms as the Perl 5 programming language system itself.
 
