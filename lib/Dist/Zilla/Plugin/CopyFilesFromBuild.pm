@@ -3,11 +3,8 @@ use warnings;
 use utf8;
 
 package Dist::Zilla::Plugin::CopyFilesFromBuild;
-BEGIN {
-  $Dist::Zilla::Plugin::CopyFilesFromBuild::VERSION = '0.103510';
-}
 # ABSTRACT: Copy (or move) specific files after building (for SCM inclusion, etc.)
-
+$Dist::Zilla::Plugin::CopyFilesFromBuild::VERSION = '0.142220'; # TRIAL
 use Moose;
 use MooseX::Has::Sugar;
 use Moose::Autobox;
@@ -37,8 +34,11 @@ sub after_build {
     my $data = shift;
 
     my $build_root = $data->{build_root};
-    for(@{$self->copy}) {
-        my $src = $build_root->file( $_ );
+    for my $path (@{$self->copy}) {
+        if ($path eq '') {
+            next;
+        }
+        my $src = $build_root->file( $path );
         if (-e $src) {
             my $dest = $self->zilla->root->file( $src->basename );
             File::Copy::copy "$src", "$dest"
@@ -49,8 +49,11 @@ sub after_build {
 
     my $moved_something = 0;
 
-    for(@{$self->move}) {
-        my $src = $build_root->file( $_ );
+    for my $path (@{$self->move}) {
+        if ($path eq '') {
+            next;
+        }
+        my $src = $build_root->file( $path );
         if (-e $src) {
             my $dest = $self->zilla->root->file( $src->basename );
             File::Copy::move "$src", "$dest"
@@ -110,6 +113,7 @@ __PACKAGE__->meta->make_immutable;
 no Moose;
 1; # Magic true value required at end of module
 
+__END__
 
 =pod
 
@@ -119,7 +123,7 @@ Dist::Zilla::Plugin::CopyFilesFromBuild - Copy (or move) specific files after bu
 
 =head1 VERSION
 
-version 0.103510
+version 0.142220
 
 =head1 SYNOPSIS
 
@@ -212,7 +216,3 @@ SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH
 DAMAGES.
 
 =cut
-
-
-__END__
-
